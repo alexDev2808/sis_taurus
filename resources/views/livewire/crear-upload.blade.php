@@ -1,5 +1,6 @@
 <form 
     class="md:w-1/2"
+    wire:submit.prevent="subirArchivo"
 >
     <div class="mt-4">
         <x-input-label for="titulo" :value="__('Titulo')" />
@@ -7,7 +8,7 @@
             id="titulo" 
             class="block mt-1 w-full" 
             type="text" 
-            name="titulo" 
+            wire:model="titulo" 
             :value="old('titulo')" 
             placeholder="Titulo del elemento"
             />
@@ -20,7 +21,8 @@
             id="imagen" 
             class="block mt-1 w-full" 
             type="file" 
-            name="imagen" 
+            wire:model="imagen" 
+            accept="image/*"
             />
         <x-input-error :messages="$errors->get('imagen')" class="mt-2" />
     </div>
