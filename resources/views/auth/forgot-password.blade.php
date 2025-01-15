@@ -1,3 +1,6 @@
+@section('titulo_pagina')
+    Resetear contraseña
+@endsection
 <x-guest-layout>
     <div class="mb-4 text-sm text-gray-600">
         {{ __('¿Olvidaste tu contraseña? Escribe el correo con el que te registraste y enviaremos un enlace para crear una nueva contraseña') }}

@@ -1,3 +1,6 @@
+@section('titulo_pagina')
+    Registrarse
+@endsection
 <x-guest-layout>
     <form method="POST" action="{{ route('register') }}" novalidate>
         @csrf
