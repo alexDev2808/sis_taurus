@@ -1,0 +1,1 @@
+<h1 class="text-4xl font-black">Taurus <span class="font-normal text-lg">MX</span></h1>
