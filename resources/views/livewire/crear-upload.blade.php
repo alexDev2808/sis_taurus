@@ -25,6 +25,15 @@
             accept="image/*"
             />
         <x-input-error :messages="$errors->get('imagen')" class="mt-2" />
+
+        <div class="my-5 w-80">
+            @if ($imagen)
+               <span class="font-bold">Preview imagen:</span>
+               <div class="border-4 border-gray-700 rounded-lg p-2">
+                   <img src="{{ $imagen->temporaryUrl() }}" alt=""> 
+               </div>
+            @endif
+        </div>
     </div>
 
     <div class="flex justify-end mt-8">
