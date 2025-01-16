@@ -13,5 +13,7 @@
 7. Opcional. Si hay seed: `php artisan migrate --seed`
 8. Ejecutar `$ npm install`
 9. Clonar el repositorio para las validadciones en 'ES' -> `$ git clone https://github.com/MarcoGomesr/laravel-validation-en-espanol.git resources/lang`
-#### 10. Levantar el servidor
+10. Crear enlace simbolico para visualizar imagenes: `$ php artisan storage:link`
+
+#### Levantar el servidor
 Ejecutar `$ php artisan serve` y `$ npm run dev`
