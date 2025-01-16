@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Upload;
 use Illuminate\Http\Request;
 
 class UploadController extends Controller
@@ -42,9 +43,11 @@ class UploadController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Upload $upload)
     {
-        //
+        return view('uploads.edit', [
+            'upload' => $upload
+        ] );
     }
 
     /**
