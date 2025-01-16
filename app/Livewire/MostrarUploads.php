@@ -9,7 +9,7 @@ class MostrarUploads extends Component
 {
     public function render()
     {
-        $uploads = Upload::all();
+        $uploads = Upload::paginate(15);
 
         return view('livewire.mostrar-uploads', [
             'uploads' => $uploads
