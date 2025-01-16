@@ -18,12 +18,12 @@
                         >
                         Editar
                     </a>
-                    <a 
-                        href="#"
+                    <button
+                        wire:click="$dispatch('eliminar', {{ $upload->id }})"
                         class="bg-red-700 py-2 px-4 rounded-lg text-white text-center text-xs font-bold"
                         >
                         Eliminar
-                    </a>
+                    </button>
                 </div>
             </div> 
         @empty
@@ -37,3 +37,34 @@
     </div>
     
 </div>
+
+@push('scripts')
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        document.addEventListener('livewire:initialized', function () {
+            @this.on('eliminar', uploadId => {
+                Swal.fire({
+                title: "¿Eliminar elemento?",
+                text: "Esta acción es irreversible!",
+                icon: "danger",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                cancelButtonText: "Cancelar",
+                confirmButtonText: "Si, eliminar!"
+                }).then((result) => {
+                if (result.isConfirmed) {
+                    // Eliminar upload
+                    @this.call('eliminarUpload', uploadId)
+                    Swal.fire({
+                        title: "Eliminado!",
+                        text: "El archivo ha sido eliminado.",
+                        icon: "success"
+                    });
+                }
+            });
+            })
+        })
+    </script>
+
+@endpush
