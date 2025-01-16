@@ -10,6 +10,10 @@
                     </a>
                     <p class="text-sm text-gray-500">Ultima actualización: {{ $upload->updated_at->format('d/m/Y') }}</p>
                 </div>
+
+                <div class="w-60 border-4 border-gray-700 rounded-lg p-2 mx-auto mt-2 md:mt-0">
+                    <img src="{{ asset('storage/uploads/' . $upload->imagen ) }}" alt="{{ 'Archivo: ' . $upload->titulo }}">
+                </div>
     
                 <div class="flex flex-col md:flex-row items-stretch gap-3 mt-5 md:mt-0">
                     <a 
