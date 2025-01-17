@@ -1,3 +1,4 @@
 
-
-<h2>Slider comunicados</h2>
+<x-slider>
+    <livewire:show-carrusel />
+</x-slider>
