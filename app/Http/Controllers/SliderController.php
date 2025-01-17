@@ -11,7 +11,7 @@ class SliderController extends Controller
      */
     public function index()
     {
-        return view('slider.index');
+        return view('sliders.index');
     }
 
     /**

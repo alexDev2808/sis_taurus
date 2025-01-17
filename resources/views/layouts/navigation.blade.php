@@ -18,6 +18,9 @@
                     <x-nav-link :href="route('uploads.create')" :active="request()->routeIs('uploads.create')">
                         {{ __('Subir Archivos') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('sliders.index')" :active="request()->routeIs('sliders.index')">
+                        {{ __('Sliders') }}
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -75,6 +78,9 @@
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('uploads.create')" :active="request()->routeIs('uploads.create')">
                 {{ __('Subir Archivos') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('sliders.index')" :active="request()->routeIs('sliders.index')">
+                {{ __('Sliders') }}
             </x-responsive-nav-link>
         </div>
 
