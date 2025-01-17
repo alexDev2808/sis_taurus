@@ -13,7 +13,7 @@ class UploadPolicy
      */
     public function viewAny(User $user): bool
     {
-        //
+        return $user->rol !== 3;
     }
 
     /**
@@ -29,7 +29,7 @@ class UploadPolicy
      */
     public function create(User $user): bool
     {
-        //
+        return $user->rol !== 3;
     }
 
     /**

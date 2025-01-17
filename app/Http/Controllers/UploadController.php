@@ -12,6 +12,7 @@ class UploadController extends Controller
      */
     public function index()
     {
+        $this->authorize('viewAny', Upload::class );
         return view('uploads.index');
     }
 
@@ -20,7 +21,7 @@ class UploadController extends Controller
      */
     public function create()
     {
-        
+        $this->authorize('create', Upload::class );
         return view('uploads.create');
     }
 
