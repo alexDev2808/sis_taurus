@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CarruselController;
+use App\Http\Controllers\InyeccionController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\UploadController;
@@ -25,6 +26,9 @@ Route::get('/uploads', [UploadController::class, 'index'] )->middleware(['auth',
 Route::get('/uploads/create', [UploadController::class, 'create'] )->middleware(['auth', 'verified'])->name('uploads.create');
 Route::get('/uploads/{upload}/edit', [UploadController::class, 'edit'] )->middleware(['auth', 'verified'])->name('uploads.edit');
 Route::get('/uploads/show', [UploadController::class, 'show'] )->middleware(['auth', 'verified'])->name('uploads.show');
+
+Route::get('/inyeccion', [InyeccionController::class, 'index'] )->middleware(['auth', 'verified'])->name('inyeccion.index');
+
 
 // Slider
 Route::get('/sliders', [SliderController::class, 'index'] )->middleware(['auth', 'verified'])->name('sliders.index');
