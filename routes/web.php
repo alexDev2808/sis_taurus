@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CarruselController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\UploadController;
@@ -28,6 +29,8 @@ Route::get('/uploads/show', [UploadController::class, 'show'] )->middleware(['au
 // Slider
 Route::get('/sliders', [SliderController::class, 'index'] )->middleware(['auth', 'verified'])->name('sliders.index');
 
+// Carrusel
+Route::get('/carrusel', [CarruselController::class, 'index'])->middleware(['auth', 'verified'])->name('carrusel.index');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
