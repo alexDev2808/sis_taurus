@@ -15,9 +15,9 @@
                     <x-nav-link :href="route('uploads.index')" :active="request()->routeIs('uploads.index')">
                         {{ __('Comunicados') }}
                     </x-nav-link>
-                    {{-- <x-nav-link :href="route('uploads.create')" :active="request()->routeIs('uploads.create')">
-                        {{ __('Subir Archivos Comunicados') }}
-                    </x-nav-link> --}}
+                    <x-nav-link :href="route('inyeccion.index')" :active="request()->routeIs('inyeccion.index')">
+                        {{ __('Inyección') }}
+                    </x-nav-link>
                     {{-- <x-nav-link :href="route('carrusel.index')" :active="request()->routeIs('carrusel.index')">
                         {{ __('Carruseles') }}
                     </x-nav-link>
@@ -79,10 +79,10 @@
             <x-responsive-nav-link :href="route('uploads.index')" :active="request()->routeIs('uploads.index')">
                 {{ __('Comunicados') }}
             </x-responsive-nav-link>
-            {{-- <x-responsive-nav-link :href="route('uploads.create')" :active="request()->routeIs('uploads.create')">
-                {{ __('Subir Archivos Comunicados') }}
+            <x-responsive-nav-link :href="route('inyeccion.index')" :active="request()->routeIs('inyeccion.index')">
+                {{ __('Inyección') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('carrusel.index')" :active="request()->routeIs('carrusel.index')">
+            {{-- <x-responsive-nav-link :href="route('carrusel.index')" :active="request()->routeIs('carrusel.index')">
                 {{ __('Carruseles') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('carrusel.create')" :active="request()->routeIs('carrusel.create')">
