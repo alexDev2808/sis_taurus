@@ -18,8 +18,11 @@
                     <x-nav-link :href="route('uploads.create')" :active="request()->routeIs('uploads.create')">
                         {{ __('Subir Archivos') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('sliders.index')" :active="request()->routeIs('sliders.index')">
+                    <x-nav-link :href="route('carrusel.index')" :active="request()->routeIs('carrusel.index')">
                         {{ __('Sliders') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('carrusel.create')" :active="request()->routeIs('carrusel.create')">
+                        {{ __('Crear Carrusel') }}
                     </x-nav-link>
                 </div>
             </div>
@@ -79,8 +82,11 @@
             <x-responsive-nav-link :href="route('uploads.create')" :active="request()->routeIs('uploads.create')">
                 {{ __('Subir Archivos') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('sliders.index')" :active="request()->routeIs('sliders.index')">
+            <x-responsive-nav-link :href="route('carrusel.index')" :active="request()->routeIs('carrusel.index')">
                 {{ __('Sliders') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('carrusel.create')" :active="request()->routeIs('carrusel.create')">
+                {{ __('Crear carrusel') }}
             </x-responsive-nav-link>
         </div>
 

@@ -19,7 +19,7 @@ class CarruselController extends Controller
      */
     public function create()
     {
-        //
+        return view('carrusel.create');
     }
 
     /**

@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('carrusel', function (Blueprint $table) {
+        Schema::table('carrusels', function (Blueprint $table) {
             $table->string('nombre');
             $table->string('desc');
             $table->integer('tiempo')->default(10);
