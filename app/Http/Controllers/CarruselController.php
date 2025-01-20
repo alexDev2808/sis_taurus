@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Carrusel;
 use Illuminate\Http\Request;
 
 class CarruselController extends Controller
@@ -41,9 +42,9 @@ class CarruselController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Carrusel $carrusel)
     {
-        //
+        return view('carrusel.edit', compact('carrusel'));
     }
 
     /**

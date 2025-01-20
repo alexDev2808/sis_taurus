@@ -32,6 +32,7 @@ Route::get('/sliders', [SliderController::class, 'index'] )->middleware(['auth',
 // Carrusel
 Route::get('/carrusel', [CarruselController::class, 'index'])->middleware(['auth', 'verified'])->name('carrusel.index');
 Route::get('/carrusel/create', [CarruselController::class, 'create'])->middleware(['auth', 'verified'])->name('carrusel.create');
+Route::get('/carrusel/{carrusel}/edit', [CarruselController::class, 'edit'])->middleware(['auth', 'verified'])->name('carrusel.edit');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

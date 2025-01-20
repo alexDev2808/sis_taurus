@@ -5,7 +5,7 @@
         @forelse ($carruseles as $carrusel)
             <div class="p-6 bg-white border-b border-gray-200 md:flex md:justify-between md:items-center">
                 <div class="leading-10">
-                    <a href="{{ route('uploads.edit', $carrusel->id ) }}" class="text-xl font-bold">
+                    <a href="{{ route('carrusel.edit', $carrusel->id ) }}" class="text-xl font-bold">
                         {{ $carrusel->nombre }}
                     </a>
                     <p class="text-sm text-gray-500">{{ $carrusel->desc }}</p>
@@ -14,7 +14,7 @@
 
                 <div class="flex flex-col md:flex-row items-stretch gap-3 mt-5 md:mt-0">
                     <a 
-                        href="{{ route('uploads.edit', $carrusel->id ) }}"
+                        href="{{ route('carrusel.edit', $carrusel->id ) }}"
                         class="bg-slate-800 py-2 px-4 rounded-lg text-white text-center text-xs font-bold"
                         >
                         Editar
