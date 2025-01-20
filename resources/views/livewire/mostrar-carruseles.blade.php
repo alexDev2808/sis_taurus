@@ -5,7 +5,7 @@
         @forelse ($carruseles as $carrusel)
             <div class="p-6 bg-white border-b border-gray-200 md:flex md:justify-between md:items-center">
                 <div class="leading-10">
-                    <a href="{{ route('carrusel.edit', $carrusel->id ) }}" class="text-xl font-bold">
+                    <a href="{{ route('carrusel.show', $carrusel->id ) }}" class="text-xl font-bold">
                         {{ $carrusel->nombre }}
                     </a>
                     <p class="text-sm text-gray-500">{{ $carrusel->desc }}</p>

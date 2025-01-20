@@ -34,9 +34,9 @@ class CarruselController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show( Carrusel $carrusel )
     {
-        //
+        return view('carrusel.show', ['carrusel'=> $carrusel ]);
     }
 
     /**
