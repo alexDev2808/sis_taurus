@@ -9,7 +9,7 @@ use Livewire\Component;
 class ShowCarrusel extends Component
 {
     public $isPaused = false;
-    public $delay;
+    public $delay = 3000;
 
     protected $listeners = [];
 
@@ -17,9 +17,6 @@ class ShowCarrusel extends Component
         $this->isPaused = !$this->isPaused;
     }
 
-    public function mount(Carrusel $carrusel) {
-        $this->delay = $carrusel->tiempo * 60000;
-    }
     public function render()
     {
         $uploads = Upload::all();

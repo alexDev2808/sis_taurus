@@ -13,17 +13,17 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('uploads.index')" :active="request()->routeIs('uploads.index')">
-                        {{ __('Archivos') }}
+                        {{ __('Comunicados') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('uploads.create')" :active="request()->routeIs('uploads.create')">
-                        {{ __('Subir Archivos') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('carrusel.index')" :active="request()->routeIs('carrusel.index')">
+                    {{-- <x-nav-link :href="route('uploads.create')" :active="request()->routeIs('uploads.create')">
+                        {{ __('Subir Archivos Comunicados') }}
+                    </x-nav-link> --}}
+                    {{-- <x-nav-link :href="route('carrusel.index')" :active="request()->routeIs('carrusel.index')">
                         {{ __('Carruseles') }}
                     </x-nav-link>
                     <x-nav-link :href="route('carrusel.create')" :active="request()->routeIs('carrusel.create')">
                         {{ __('Crear Carrusel') }}
-                    </x-nav-link>
+                    </x-nav-link> --}}
                 </div>
             </div>
 
@@ -77,17 +77,17 @@
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('uploads.index')" :active="request()->routeIs('uploads.index')">
-                {{ __('Archivos') }}
+                {{ __('Comunicados') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('uploads.create')" :active="request()->routeIs('uploads.create')">
-                {{ __('Subir Archivos') }}
+            {{-- <x-responsive-nav-link :href="route('uploads.create')" :active="request()->routeIs('uploads.create')">
+                {{ __('Subir Archivos Comunicados') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('carrusel.index')" :active="request()->routeIs('carrusel.index')">
                 {{ __('Carruseles') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('carrusel.create')" :active="request()->routeIs('carrusel.create')">
                 {{ __('Crear carrusel') }}
-            </x-responsive-nav-link>
+            </x-responsive-nav-link> --}}
         </div>
 
         <!-- Responsive Settings Options -->
