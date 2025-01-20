@@ -7,6 +7,12 @@ use Livewire\Component;
 
 class MostrarCarruseles extends Component
 {
+
+    protected $listeners = ['eliminarCarrusel'];
+
+    public function eliminarCarrusel( Carrusel $carrusel) {
+        $carrusel->delete();
+    }
     public function render()
     {
         $carruseles = Carrusel::all();
