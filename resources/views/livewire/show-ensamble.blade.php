@@ -6,7 +6,7 @@
         @forelse ($items as $item)
             <div class="p-6 bg-white border-b border-gray-200 md:flex md:justify-between md:items-center">
                 <div class="leading-10">
-                    <a href="{{ route('inyeccion.edit', $item->id ) }}" class="text-xl font-bold">
+                    <a href="{{ route('ensamble.edit', $item->id ) }}" class="text-xl font-bold">
                         {{ $item->nombre }}
                     </a>
                     <p class="text-sm text-gray-500">{{ $item->desc }}</p>
@@ -15,7 +15,7 @@
 
                 <div class="flex flex-col md:flex-row items-stretch gap-3 mt-5 md:mt-0">
                     <a 
-                        href="{{ route('inyeccion.edit', $item->id ) }}"
+                        href="{{ route('ensamble.edit', $item->id ) }}"
                         class="bg-slate-800 py-2 px-4 rounded-lg text-white text-center text-xs font-bold"
                         >
                         Editar

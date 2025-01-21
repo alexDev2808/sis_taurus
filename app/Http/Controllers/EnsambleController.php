@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Ensamble;
 use Illuminate\Http\Request;
 
 class EnsambleController extends Controller
@@ -41,9 +42,9 @@ class EnsambleController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Ensamble $ensamble)
     {
-        //
+        return view('ensamble.edit', compact('ensamble'));
     }
 
     /**
