@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Inyeccion;
 use Illuminate\Http\Request;
 
 class InyeccionController extends Controller
@@ -41,9 +42,9 @@ class InyeccionController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Inyeccion $inyeccion)
     {
-        //
+        return view('inyeccion.edit', compact('inyeccion'));
     }
 
     /**
