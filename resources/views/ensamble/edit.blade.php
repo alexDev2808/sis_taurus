@@ -1,5 +1,5 @@
 @section('titulo_pagina')
-    Subir archivo
+    Editar
 @endsection
 <x-app-layout>
 
@@ -16,7 +16,7 @@
                 </div>
                 <div class="p-6 text-gray-900">
 
-                    <h1 class="text-2xl font-bold text-center mb-1">Editar elemento: {{ $ensamble->titulo }}</h1>
+                    <h1 class="text-2xl font-bold text-center mb-1">Editar elemento: {{ $ensamble->nombre }}</h1>
 
                     <div class="md:flex md:justify-center p-5">
 

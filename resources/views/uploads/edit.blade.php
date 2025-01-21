@@ -1,5 +1,5 @@
 @section('titulo_pagina')
-    Subir archivo
+    Editar archivo
 @endsection
 <x-app-layout>
     {{-- <x-slot name="header">

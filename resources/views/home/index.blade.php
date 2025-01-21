@@ -22,10 +22,11 @@
             
             <img src="{{ asset('images/bgTaurus.jpg') }}" alt="" >
             <div class="w-full sm:max-w-md mt-6 px-10 pt-8 pb-4 bg-white shadow-md overflow-hidden sm:rounded-lg flex justify-center items-center flex-col absolute">
-                <a href="/">
+                <a href="{{ route('home.index') }}">
                     <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
                 </a>
                 <p class="font-bold mt-6 text-lg">Bienvenid@</p>
+                <p class="font-semibold underline">{{ auth()->user()->name }}</p>
 
                 
             </div>

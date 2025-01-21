@@ -1,1 +1,5 @@
-<h1 class="text-4xl font-black">Taurus <span class="font-normal text-lg">MX</span></h1>
+<img 
+  class="w-40"
+  src="{{ asset('images/logo taurus negro.png') }}" 
+  alt="Logo Taurus"
+>
