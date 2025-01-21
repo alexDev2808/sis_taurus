@@ -33,7 +33,10 @@ Route::get('/inyeccion/create', [InyeccionController::class, 'create'] )->middle
 Route::get('/inyeccion/{inyeccion}/edit', [InyeccionController::class, 'edit'] )->middleware(['auth', 'verified'])->name('inyeccion.edit');
 Route::get('/inyeccion/show', [InyeccionController::class, 'show'] )->middleware(['auth', 'verified'])->name('inyeccion.show');
 
-Route::get('/ensamble', [EnsambleController::class, 'index'] )->middleware(['auth', 'verified'])->name('ensamble.index');
+Route::get('/ensambles', [EnsambleController::class, 'index'] )->middleware(['auth', 'verified'])->name('ensamble.index');
+Route::get('/ensambles/create', [EnsambleController::class, 'create'] )->middleware(['auth', 'verified'])->name('ensamble.create');
+Route::get('/ensambles/{ensamble}/edit', [EnsambleController::class, 'edit'] )->middleware(['auth', 'verified'])->name('ensamble.edit');
+Route::get('/ensambles/show', [EnsambleController::class, 'show'] )->middleware(['auth', 'verified'])->name('ensamble.show');
 
 // Carrusel
 Route::get('/carrusel', [CarruselController::class, 'index'])->middleware(['auth', 'verified'])->name('carrusel.index');
