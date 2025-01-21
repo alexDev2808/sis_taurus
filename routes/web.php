@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CarruselController;
+use App\Http\Controllers\EnsambleController;
 use App\Http\Controllers\InyeccionController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SliderController;
@@ -32,9 +33,7 @@ Route::get('/inyeccion/create', [InyeccionController::class, 'create'] )->middle
 Route::get('/inyeccion/{inyeccion}/edit', [InyeccionController::class, 'edit'] )->middleware(['auth', 'verified'])->name('inyeccion.edit');
 Route::get('/inyeccion/show', [InyeccionController::class, 'show'] )->middleware(['auth', 'verified'])->name('inyeccion.show');
 
-
-// Slider
-Route::get('/sliders', [SliderController::class, 'index'] )->middleware(['auth', 'verified'])->name('sliders.index');
+Route::get('/ensamble', [EnsambleController::class, 'index'] )->middleware(['auth', 'verified'])->name('ensamble.index');
 
 // Carrusel
 Route::get('/carrusel', [CarruselController::class, 'index'])->middleware(['auth', 'verified'])->name('carrusel.index');

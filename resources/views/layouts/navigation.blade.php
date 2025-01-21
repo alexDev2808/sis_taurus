@@ -18,10 +18,10 @@
                     <x-nav-link :href="route('inyeccion.index')" :active="request()->routeIs('inyeccion.index')">
                         {{ __('Inyección') }}
                     </x-nav-link>
-                    {{-- <x-nav-link :href="route('carrusel.index')" :active="request()->routeIs('carrusel.index')">
-                        {{ __('Carruseles') }}
+                    <x-nav-link :href="route('ensamble.index')" :active="request()->routeIs('ensamble.index')">
+                        {{ __('Ensamble') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('carrusel.create')" :active="request()->routeIs('carrusel.create')">
+                    {{-- <x-nav-link :href="route('carrusel.create')" :active="request()->routeIs('carrusel.create')">
                         {{ __('Crear Carrusel') }}
                     </x-nav-link> --}}
                 </div>
@@ -82,10 +82,10 @@
             <x-responsive-nav-link :href="route('inyeccion.index')" :active="request()->routeIs('inyeccion.index')">
                 {{ __('Inyección') }}
             </x-responsive-nav-link>
-            {{-- <x-responsive-nav-link :href="route('carrusel.index')" :active="request()->routeIs('carrusel.index')">
-                {{ __('Carruseles') }}
+            <x-responsive-nav-link :href="route('ensamble.index')" :active="request()->routeIs('ensamble.index')">
+                {{ __('Ensamble') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('carrusel.create')" :active="request()->routeIs('carrusel.create')">
+            {{-- <x-responsive-nav-link :href="route('carrusel.create')" :active="request()->routeIs('carrusel.create')">
                 {{ __('Crear carrusel') }}
             </x-responsive-nav-link> --}}
         </div>
