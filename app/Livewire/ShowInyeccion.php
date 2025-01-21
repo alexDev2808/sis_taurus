@@ -7,6 +7,11 @@ use Livewire\Component;
 
 class ShowInyeccion extends Component
 {
+
+    protected $listeners = ['eliminarItem'];
+    public function eliminarItem(Inyeccion $inyeccion) {
+        $inyeccion->delete();
+    }
     public function render()
     {
         $items = Inyeccion::all();

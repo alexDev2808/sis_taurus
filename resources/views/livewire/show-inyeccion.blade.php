@@ -55,7 +55,7 @@
                 }).then((result) => {
                     if (result.isConfirmed) {
                         // Eliminar upload
-                        @this.call('eliminarCarrusel', itemId)
+                        @this.call('eliminarItem', itemId)
                         Swal.fire({
                             title: "Eliminado!",
                             text: "El elemento ha sido eliminado.",
