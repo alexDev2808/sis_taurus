@@ -12,6 +12,8 @@ class EnsambleController extends Controller
      */
     public function index()
     {
+        $this->authorize('viewAny', Ensamble::class );
+
         return view('ensamble.index');
     }
 
@@ -20,6 +22,8 @@ class EnsambleController extends Controller
      */
     public function create()
     {
+        $this->authorize('create', Ensamble::class );
+
         return view('ensamble.create');
     }
 
@@ -44,6 +48,7 @@ class EnsambleController extends Controller
      */
     public function edit(Ensamble $ensamble)
     {
+        $this->authorize('update', Ensamble::class );
         return view('ensamble.edit', compact('ensamble'));
     }
 

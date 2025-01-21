@@ -40,6 +40,8 @@ class UploadController extends Controller
      */
     public function edit(Upload $upload)
     {
+        $this->authorize('update', Upload::class );
+
         return view('uploads.edit', [
             'upload' => $upload
         ] );

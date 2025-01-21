@@ -12,6 +12,7 @@ class InyeccionController extends Controller
      */
     public function index()
     {
+        $this->authorize('viewAny', Inyeccion::class );
         return view('inyeccion.index');
     }
 
@@ -20,6 +21,7 @@ class InyeccionController extends Controller
      */
     public function create()
     {
+        $this->authorize('create', Inyeccion::class );
         return view('inyeccion.create');
     }
 
@@ -44,6 +46,8 @@ class InyeccionController extends Controller
      */
     public function edit(Inyeccion $inyeccion)
     {
+        $this->authorize('update', Inyeccion::class );
+
         return view('inyeccion.edit', compact('inyeccion'));
     }
 

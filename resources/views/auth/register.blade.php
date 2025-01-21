@@ -30,7 +30,8 @@
                 <option value="">--- Selecciona un rol ---</option>
                 <option value="1">Administrador</option>
                 <option value="2">DO</option>
-                <option value="3">Produccion</option>
+                <option value="3">Inyección</option>
+                <option value="4">Ensamble</option>
             </select>
 
             <x-input-error :messages="$errors->get('rol')" class="mt-2" />
