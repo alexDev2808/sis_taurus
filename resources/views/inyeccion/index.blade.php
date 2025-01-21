@@ -12,7 +12,7 @@
                     <a href="{{ route('uploads.show') }}" class="p-3 bg-indigo-500 text-white text-sm font-bold">
                         {{ __('Ver carrusel') }}
                     </a>
-                    <a href="{{ route('uploads.create') }}" class="p-3 bg-slate-900 text-white text-sm font-bold">
+                    <a href="{{ route('inyeccion.create') }}" class="p-3 bg-slate-900 text-white text-sm font-bold">
                         {{ __('Agregar elemento') }}
                     </a>
                 </div>

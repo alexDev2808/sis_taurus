@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Inyeccion extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'nombre',
+        'desc',
+        'url',
+    ];
 }

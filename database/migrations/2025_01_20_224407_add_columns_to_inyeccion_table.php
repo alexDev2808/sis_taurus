@@ -11,8 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('inyeccion', function (Blueprint $table) {
-            //
+        Schema::table('inyeccions', function (Blueprint $table) {
+            $table->string('nombre');
+            $table->string('desc');
+            $table->string('url');
         });
     }
 
@@ -21,8 +23,10 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('inyeccion', function (Blueprint $table) {
-            //
+        Schema::table('inyeccions', function (Blueprint $table) {
+            $table->dropColumn('nombre');
+            $table->dropColumn('desc');
+            $table->dropColumn('url');
         });
     }
 };

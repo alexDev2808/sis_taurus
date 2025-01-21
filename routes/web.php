@@ -28,6 +28,7 @@ Route::get('/uploads/{upload}/edit', [UploadController::class, 'edit'] )->middle
 Route::get('/uploads/show', [UploadController::class, 'show'] )->middleware(['auth', 'verified'])->name('uploads.show');
 
 Route::get('/inyeccion', [InyeccionController::class, 'index'] )->middleware(['auth', 'verified'])->name('inyeccion.index');
+Route::get('/inyeccion/create', [InyeccionController::class, 'create'] )->middleware(['auth', 'verified'])->name('inyeccion.create');
 
 
 // Slider

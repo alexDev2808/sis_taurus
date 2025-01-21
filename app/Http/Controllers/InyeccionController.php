@@ -19,7 +19,7 @@ class InyeccionController extends Controller
      */
     public function create()
     {
-        //
+        return view('inyeccion.create');
     }
 
     /**
