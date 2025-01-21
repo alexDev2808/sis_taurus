@@ -24,9 +24,9 @@
                 ¿Ya tienes cuenta?
             </x-link>
 
-            <x-link :href="route('register')">
+            {{-- <x-link :href="route('register')">
                 Crear cuenta
-            </x-link>
+            </x-link> --}}
 
 
         </div>
