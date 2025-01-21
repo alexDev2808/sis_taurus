@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CarruselController;
 use App\Http\Controllers\EnsambleController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InyeccionController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SliderController;
@@ -22,6 +23,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/home', [HomeController::class,'index'])->middleware(['auth','verified'])->name('home.index');
 
 Route::get('/uploads', [UploadController::class, 'index'] )->middleware(['auth', 'verified'])->name('uploads.index');
 Route::get('/uploads/create', [UploadController::class, 'create'] )->middleware(['auth', 'verified'])->name('uploads.create');
