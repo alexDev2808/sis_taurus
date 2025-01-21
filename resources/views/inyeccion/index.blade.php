@@ -9,7 +9,7 @@
                 </h2>
 
                 <div class="flex gap-1">
-                    <a href="{{ route('uploads.show') }}" class="p-3 bg-indigo-500 text-white text-sm font-bold">
+                    <a href="{{ route('inyeccion.show') }}" class="p-3 bg-indigo-500 text-white text-sm font-bold">
                         {{ __('Ver carrusel') }}
                     </a>
                     <a href="{{ route('inyeccion.create') }}" class="p-3 bg-slate-900 text-white text-sm font-bold">
