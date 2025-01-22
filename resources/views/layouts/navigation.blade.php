@@ -24,6 +24,12 @@
                     <x-nav-link :href="route('ensamble.index')" :active="request()->routeIs('ensamble.index')">
                         {{ __('Ensamble') }}
                     </x-nav-link>
+                    @if( Auth::user()->rol == 1 )
+                        <x-nav-link :href="route('users.index')" :active="request()->routeIs('users.index')">
+                           {{ __('Usuarios') }}
+                        </x-nav-link>  
+                    @endif
+                    
                 </div>
             </div>
 
