@@ -13,7 +13,7 @@ class UploadPolicy
      */
     public function viewAny(User $user): bool
     {
-        return $user->rol === 1 || $user->rol === 2;
+        return strval($user->rol)  === strval(2) || strval($user->rol) === strval(1);
     }
 
     /**
@@ -29,7 +29,7 @@ class UploadPolicy
      */
     public function create(User $user): bool
     {
-        return $user->rol === 1 || $user->rol === 2;
+        return strval($user->rol)  === strval(2) || strval($user->rol) === strval(1);
     }
 
     /**
@@ -37,7 +37,7 @@ class UploadPolicy
      */
     public function update(User $user): bool
     {
-        return $user->rol === 1 || $user->rol === 2;
+        return strval($user->rol)  === strval(2) || strval($user->rol) === strval(1);
     }
 
     /**

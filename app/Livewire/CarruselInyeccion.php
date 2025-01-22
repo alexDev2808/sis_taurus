@@ -8,7 +8,7 @@ use Livewire\Component;
 class CarruselInyeccion extends Component
 {
     public $isPaused = false;
-    public $delay = 30000;
+    public $delay = 90000;
 
     protected $listeners = [];
 

@@ -10,7 +10,8 @@
                         {{ $item->nombre }}
                     </a>
                     <p class="text-sm text-gray-500">{{ $item->desc }}</p>
-                    <p class="text-sm text-gray-500">Ultima actualización: {{ $item->updated_at->format('d/m/Y') }}</p>
+                    <p class="text-sm text-gray-500">Ultima actualización: {{ $item->updated_at->format('d/m/Y H:i:s') }}</p>
+
                 </div>
 
                 <div class="flex flex-col md:flex-row items-stretch gap-3 mt-5 md:mt-0">

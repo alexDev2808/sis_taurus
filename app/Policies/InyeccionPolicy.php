@@ -13,7 +13,7 @@ class InyeccionPolicy
      */
     public function viewAny(User $user): bool
     {
-        return $user->rol === 3 || $user->rol === 1;
+        return strval($user->rol)  === strval(3) || strval($user->rol) === strval(1);
     }
 
     /**
@@ -29,7 +29,7 @@ class InyeccionPolicy
      */
     public function create(User $user): bool
     {
-        return $user->rol === 3 || $user->rol === 1;
+        return strval($user->rol)  === strval(3) || strval($user->rol) === strval(1);
     }
 
     /**
@@ -37,7 +37,7 @@ class InyeccionPolicy
      */
     public function update(User $user): bool
     {
-        return $user->rol === 3 || $user->rol === 1;
+        return strval($user->rol)  === strval(3) || strval($user->rol) === strval(1);
     }
 
     /**

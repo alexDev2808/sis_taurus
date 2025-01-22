@@ -8,7 +8,8 @@
                     <a href="{{ route('uploads.edit', $upload->id ) }}" class="text-xl font-bold">
                         {{ $upload->titulo }}
                     </a>
-                    <p class="text-sm text-gray-500">Ultima actualización: {{ $upload->updated_at->format('d/m/Y') }}</p>
+                    <p class="text-sm text-gray-500">Ultima actualización: {{ $upload->updated_at->format('d/m/Y H:i:s') }}</p>
+
                 </div>
 
                 <div class="w-60 border-4 border-gray-700 rounded-lg p-2 mx-auto mt-2 md:mt-0">

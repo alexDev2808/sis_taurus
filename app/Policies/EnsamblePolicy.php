@@ -13,7 +13,8 @@ class EnsamblePolicy
      */
     public function viewAny(User $user): bool
     {
-        return $user->rol === 1 || $user->rol === 4;
+        return strval($user->rol)  === strval(4) || strval($user->rol) === strval(1);
+
     }
 
     /**
@@ -29,7 +30,7 @@ class EnsamblePolicy
      */
     public function create(User $user): bool
     {
-        return $user->rol === 1 || $user->rol === 4;
+        return strval($user->rol)  === strval(4) || strval($user->rol) === strval(1);
     }
 
     /**
@@ -37,7 +38,7 @@ class EnsamblePolicy
      */
     public function update(User $user): bool
     {
-        return $user->rol === 1 || $user->rol === 4;
+        return strval($user->rol)  === strval(4) || strval($user->rol) === strval(1);
     }
 
     /**

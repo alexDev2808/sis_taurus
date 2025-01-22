@@ -9,7 +9,7 @@ use Livewire\Component;
 class ShowCarrusel extends Component
 {
     public $isPaused = false;
-    public $delay = 3000;
+    public $delay = 60000;
 
     protected $listeners = [];
 
