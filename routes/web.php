@@ -44,6 +44,7 @@ Route::get('/ensambles/show', [EnsambleController::class, 'show'] )->middleware(
 
 Route::get('/users', [UserController::class, 'index'] )->middleware(['auth', 'verified'])->name('users.index');
 Route::get('/users/create', [UserController::class, 'create'] )->middleware(['auth', 'verified'])->name('users.create');
+Route::get('/users/{user}/edit', [UserController::class, 'edit'] )->middleware(['auth', 'verified'])->name('users.edit');
 
 // Carrusel
 Route::get('/carrusel', [CarruselController::class, 'index'])->middleware(['auth', 'verified'])->name('carrusel.index');

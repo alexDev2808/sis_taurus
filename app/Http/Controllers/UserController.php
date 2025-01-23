@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -11,6 +12,8 @@ class UserController extends Controller
      */
     public function index()
     {
+        $this->authorize('viewAny', User::class );
+
         return view('users.index');
     }
 
@@ -19,6 +22,8 @@ class UserController extends Controller
      */
     public function create()
     {
+        $this->authorize('create', User::class );
+
         return view('users.create');
     }
 
@@ -43,7 +48,8 @@ class UserController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $this->authorize('update', User::class );
+        
     }
 
     /**

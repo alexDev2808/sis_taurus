@@ -6,8 +6,8 @@
         @forelse ($items as $item)
             <div class="p-6 bg-white border-b border-gray-200 md:flex md:justify-between md:items-center">
                 <div class="leading-10">
-                    <a href="{{ route('ensamble.edit', $item->id ) }}" class="text-xl font-bold">
-                        {{ $item->nombre }}
+                    <a href="{{ route('users.edit', $item->id ) }}" class="text-xl font-bold">
+                        {{ $item->name }}
                     </a>
                     <p class="text-sm text-gray-500">{{ $item->email }}</p>
                     <p class="text-sm text-gray-500">Ultima actualización: {{ $item->updated_at->format('d/m/Y H:i:s') }}</p>
@@ -44,7 +44,7 @@
 
             @this.on('eliminar', itemId => {
                 Swal.fire({
-                    title: "¿Eliminar elemento?",
+                    title: "¿Eliminar usuario?",
                     text: "Esta acción es irreversible!",
                     icon: "danger",
                     showCancelButton: true,

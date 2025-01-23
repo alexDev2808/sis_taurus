@@ -12,7 +12,7 @@ class UserPolicy
      */
     public function viewAny(User $user): bool
     {
-        //
+        return strval($user->rol) === strval(1);
     }
 
     /**
@@ -36,7 +36,7 @@ class UserPolicy
      */
     public function update(User $user, User $model): bool
     {
-        //
+        return strval($user->rol) === strval(1);
     }
 
     /**

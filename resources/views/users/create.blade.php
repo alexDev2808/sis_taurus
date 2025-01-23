@@ -21,7 +21,7 @@
 
                     <div class="md:flex md:justify-center p-5">
 
-                        <livewire:create-ensamble />
+                        <livewire:crear-usuario />
 
                     </div>
 
