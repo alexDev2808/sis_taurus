@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CarruselController;
+use App\Http\Controllers\DataController;
 use App\Http\Controllers\EnsambleController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InyeccionController;
@@ -51,6 +52,8 @@ Route::get('/carrusel', [CarruselController::class, 'index'])->middleware(['auth
 Route::get('/carrusel/create', [CarruselController::class, 'create'])->middleware(['auth', 'verified'])->name('carrusel.create');
 Route::get('/carrusel/{carrusel}/edit', [CarruselController::class, 'edit'])->middleware(['auth', 'verified'])->name('carrusel.edit');
 Route::get('/carrusel/{carrusel}/show', [CarruselController::class, 'show'])->middleware(['auth', 'verified'])->name('carrusel.show');
+
+Route::get('/data', [DataController::class, 'index'])->middleware(['auth', 'verified'])->name('data.index');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

@@ -24,6 +24,9 @@
                     <x-nav-link :href="route('ensamble.index')" :active="request()->routeIs('ensamble.index')">
                         {{ __('Ensamble') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('data.index')" :active="request()->routeIs('data.index')">
+                        {{ __('Datos') }}
+                    </x-nav-link>
                     @if( Auth::user()->rol == 1 )
                         <x-nav-link :href="route('users.index')" :active="request()->routeIs('users.index')">
                            {{ __('Usuarios') }}
@@ -93,6 +96,9 @@
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('ensamble.index')" :active="request()->routeIs('ensamble.index')">
                 {{ __('Ensamble') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('data.index')" :active="request()->routeIs('data.index')">
+                {{ __('Datos') }}
             </x-responsive-nav-link>
             @if ( Auth::user()->rol == 1)
                 <x-responsive-nav-link :href="route('users.index')" :active="request()->routeIs('users.index')">
