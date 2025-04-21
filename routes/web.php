@@ -1,10 +1,12 @@
 <?php
 
+use App\Http\Controllers\CarouselController;
 use App\Http\Controllers\CarruselController;
 use App\Http\Controllers\DataController;
 use App\Http\Controllers\EnsambleController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InyeccionController;
+use App\Http\Controllers\MediaCarousel;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\UploadController;
@@ -54,6 +56,7 @@ Route::get('/carrusel/{carrusel}/edit', [CarruselController::class, 'edit'])->mi
 Route::get('/carrusel/{carrusel}/show', [CarruselController::class, 'show'])->middleware(['auth', 'verified'])->name('carrusel.show');
 
 Route::get('/data', [DataController::class, 'index'])->middleware(['auth', 'verified'])->name('data.index');
+Route::get('/media', [CarouselController::class, 'index'])->middleware(['auth', 'verified'])->name('carousel.index');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
