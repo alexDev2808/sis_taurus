@@ -1,79 +1,114 @@
+@push('styles')
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+@endpush
+
 <div
-    x-data="carousel({{ json_encode($media) }})"
+    class="w-screen h-screen overflow-hidden"
+    x-data="mediaCarousel"
     x-init="init()"
-    class="relative w-full max-w-2xl mx-auto"
+    @keydown.window="handleKey($event)"
+    tabindex="0"
 >
-    <template x-if="media.length > 0">
-        <div class="w-full h-64 flex items-center justify-center bg-gray-100 rounded shadow overflow-hidden">
-            <template x-if="media[current].type === 'video'">
-                <video
-                    x-ref="video"
-                    :src="media[current].src"
-                    autoplay
-                    muted
-                    controls
-                    @ended="nextVideo"
-                    class="w-full h-full object-contain rounded"
-                ></video>
-            </template>
-
-            <template x-if="media[current].type === 'image'">
-                <img
-                    :src="media[current].src"
-                    alt="imagen"
-                    class="w-full h-full object-cover rounded"
-                />
-            </template>
+    <div class="swiper mySwiper w-full h-full">
+        <div class="swiper-wrapper">
+            @foreach ($media as $item)
+                <div class="swiper-slide w-full h-full bg-black flex items-center justify-center">
+                    @if ($item['type'] === 'video')
+                        <video
+                            class="w-full h-full object-cover"
+                            src="{{ $item['src'] }}"
+                            autoplay
+                            muted
+                            controls
+                            @ended="nextSlide"
+                            x-ref="video"
+                        ></video>
+                    @else
+                        <img
+                            class="w-full h-full object-cover"
+                            src="{{ $item['src'] }}"
+                            alt="Imagen"
+                            x-ref="image"
+                        />
+                    @endif
+                </div>
+            @endforeach
         </div>
-    </template>
-
-    <div class="flex justify-between mt-4">
-        <button
-            @click="prev"
-            class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-800"
-        >
-            ← Anterior
-        </button>
-
-        <button
-            @click="next"
-            class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-800"
-        >
-            Siguiente →
-        </button>
     </div>
 </div>
 
+@push('scripts')
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
-function carousel(mediaItems) {
-    return {
-        media: mediaItems,
-        current: 0,
+document.addEventListener('alpine:init', () => {
+  Alpine.data('mediaCarousel', () => ({
+    swiper: null,
+    timer: null,
 
-        init() {
-            this.playVideoIfNeeded()
-        },
+    init() {
+      this.swiper = new Swiper(".mySwiper", {
+        loop: true,
+        effect: 'fade',
+        fadeEffect: { crossFade: true },
+        allowTouchMove: false,
+      });
 
-        next() {
-            this.current = (this.current + 1) % this.media.length
-            this.playVideoIfNeeded()
-        },
+      this.handleSlide();
 
-        prev() {
-            this.current = (this.current - 1 + this.media.length) % this.media.length
-            this.playVideoIfNeeded()
-        },
+      this.swiper.on('slideChangeTransitionEnd', () => {
+        this.handleSlide();
+      });
+    },
 
-        nextVideo() {
-            this.next()
-        },
+    handleSlide() {
+      clearTimeout(this.timer);
+      const currentSlide = this.swiper.slides[this.swiper.activeIndex];
+      const video = currentSlide.querySelector('video');
+      const image = currentSlide.querySelector('img');
 
-        playVideoIfNeeded() {
-            this.$nextTick(() => {
-                const el = this.$refs.video
-                if (el && el.tagName === 'VIDEO') el.play()
-            })
-        }
+      if (video) {
+        video.currentTime = 0;
+        video.play();
+      }
+
+      if (image) {
+        this.timer = setTimeout(() => {
+          this.swiper.slideNext();
+        }, 60000); // 60 segundos
+      }
+    },
+
+    nextSlide() {
+      this.swiper.slideNext();
+    },
+
+    prevSlide() {
+      this.swiper.slidePrev();
+    },
+
+    toggleVideoPlay() {
+      const currentSlide = this.swiper.slides[this.swiper.activeIndex];
+      const video = currentSlide.querySelector('video');
+      if (video) {
+        video.paused ? video.play() : video.pause();
+      }
+    },
+
+    handleKey(e) {
+      switch (e.key) {
+        case 'ArrowRight':
+          this.nextSlide();
+          break;
+        case 'ArrowLeft':
+          this.prevSlide();
+          break;
+        case ' ':
+          e.preventDefault();
+          this.toggleVideoPlay();
+          break;
+      }
     }
-}
+  }));
+});
 </script>
+@endpush
