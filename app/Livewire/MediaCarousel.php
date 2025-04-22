@@ -12,8 +12,9 @@ class MediaCarousel extends Component
     {
         $this->media = [
             ['type' => 'video', 'src' => '/storage/videos/video3.webm'],
-            ['type' => 'video', 'src' => '/storage/videos/video1.webm'],
+            ['type' => 'video', 'src' => '/storage/videos/v_mpeg.webm'],
             ['type' => 'video', 'src' => '/storage/videos/video4.webm'],
+            ['type' => 'image', 'src' => '/storage/images/decalogo.jpg'],
         ];
     }
 

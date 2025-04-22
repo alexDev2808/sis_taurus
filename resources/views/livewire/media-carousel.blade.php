@@ -18,7 +18,6 @@
                             class="w-full h-full object-cover"
                             src="{{ $item['src'] }}"
                             autoplay
-                            muted
                             controls
                             @ended="nextSlide"
                             x-ref="video"
@@ -74,7 +73,7 @@ document.addEventListener('alpine:init', () => {
       if (image) {
         this.timer = setTimeout(() => {
           this.swiper.slideNext();
-        }, 60000); // 60 segundos
+        }, 50000); // 60 segundos
       }
     },
 
