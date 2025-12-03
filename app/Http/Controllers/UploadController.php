@@ -47,4 +47,14 @@ class UploadController extends Controller
         ] );
     }
 
+    /**
+     * Show the settings for the slider.
+     */
+    public function settings()
+    {
+        $this->authorize('update', Upload::class );
+
+        return view('uploads.settings');
+    }
+
 }

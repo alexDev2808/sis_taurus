@@ -34,6 +34,7 @@ Route::get('/uploads', [UploadController::class, 'index'] )->middleware(['auth',
 Route::get('/uploads/create', [UploadController::class, 'create'] )->middleware(['auth', 'verified'])->name('uploads.create');
 Route::get('/uploads/{upload}/edit', [UploadController::class, 'edit'] )->middleware(['auth', 'verified'])->name('uploads.edit');
 Route::get('/uploads/show', [UploadController::class, 'show'] )->middleware(['auth', 'verified'])->name('uploads.show');
+Route::get('/uploads/slider', [UploadController::class, 'settings'] )->middleware(['auth', 'verified'])->name('uploads.settings');
 
 Route::get('/inyeccion', [InyeccionController::class, 'index'] )->middleware(['auth', 'verified'])->name('inyeccion.index');
 Route::get('/inyeccion/create', [InyeccionController::class, 'create'] )->middleware(['auth', 'verified'])->name('inyeccion.create');

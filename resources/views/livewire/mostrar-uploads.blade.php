@@ -12,7 +12,7 @@
 
                 </div>
 
-                <div class="w-60 border-4 border-gray-700 rounded-lg p-2 mx-auto mt-2 md:mt-0">
+                <div class="w-60 bg-gray-100 rounded-lg p-3 mx-auto mt-2 md:mt-0">
                     <button wire:click="$dispatch('mostrarImg', {{ $upload }})">
                         <img src="{{ asset('storage/uploads/' . $upload->imagen ) }}" alt="{{ 'Archivo: ' . $upload->titulo }}">
                     </button>
@@ -21,15 +21,15 @@
                 <div class="flex flex-col md:flex-row items-stretch gap-3 mt-5 md:mt-0">
                     <a 
                         href="{{ route('uploads.edit', $upload->id ) }}"
-                        class="bg-slate-800 py-2 px-4 rounded-lg text-white text-center text-xs font-bold"
+                        class="bg-gray-100 py-2 px-4 rounded-lg text-white text-center text-xs hover:bg-gray-200 transition-colors"
                         >
-                        Editar
+                        ✏️
                     </a>
                     <button
                         wire:click="$dispatch('eliminar', {{ $upload->id }})"
-                        class="bg-red-700 py-2 px-4 rounded-lg text-white text-center text-xs font-bold"
+                        class="bg-red-500 py-2 px-4 rounded-lg text-white text-center text-xs font-semibold hover:bg-red-600 transition-colors"
                         >
-                        Eliminar
+                        Eliminar 🗑️
                     </button>
                 </div>
             </div> 
@@ -81,7 +81,9 @@
                     height: 480,
                     imageUrl: `${path}/${upload.imagen}`,
                     imageWidth: 780,
-                    imageHeight: 480
+                    imageHeight: 480,
+                    confirmButtonText: 'Cerrar',
+                    confirmButtonColor: "#1e3a8a",
                 });
             });
         })

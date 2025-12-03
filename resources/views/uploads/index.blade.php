@@ -9,11 +9,12 @@
                 </h2>
 
                 <div class="flex gap-1">
-                    <a href="{{ route('uploads.show') }}" class="p-3 bg-indigo-500 text-white text-sm font-bold">
-                        {{ __('Ver carrusel') }}
-                    </a>
-                    <a href="{{ route('uploads.create') }}" class="p-3 bg-slate-900 text-white text-sm font-bold">
+                    <a href="{{ route('uploads.settings') }}" class="p-3 rounded-lg bg-gray-100 text-gray-600 text-sm font-bold hover:bg-gray-200 hover:text-gray-700 transition-colors">Configuración</a>
+                    <a href="{{ route('uploads.create') }}" class="p-3 rounded-lg bg-gray-100 text-gray-600 text-sm font-bold flex items-center hover:bg-gray-200 hover:text-gray-700 transition-colors">
                         {{ __('Agregar imágen') }}
+                    </a>
+                    <a href="{{ route('uploads.show') }}" class="p-3 bg-blue-900 rounded-lg text-white text-sm font-bold flex items-center hover:bg-blue-950 transition-colors">
+                        {{ __('Ver carrusel') }}
                     </a>
                 </div>
         </div>
