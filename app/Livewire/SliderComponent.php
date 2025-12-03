@@ -7,7 +7,7 @@ use Livewire\Component;
 
 class SliderComponent extends Component
 {
-    public $delay = 6000; // 5 segundos por defecto
+    public $delay = 60000; // 60 segundos por defecto
 
     public function render()
     {

@@ -8,15 +8,7 @@ use Livewire\Component;
 
 class ShowCarrusel extends Component
 {
-    public $isPaused = false;
-    public $delay = 60000;
-    
-
     protected $listeners = [];
-
-    public function toogleBtn() {
-        $this->isPaused = !$this->isPaused;
-    }
 
     public function render()
     {

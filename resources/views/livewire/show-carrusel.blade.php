@@ -35,10 +35,10 @@
                     <div class="w-full bg-white h-3/4 rounded-lg shadow-2xl shadow-black p-6">
                         <!-- Header -->
                         <div class="flex items-center gap-3 mb-6">
-                            <div class="w-12 h-6 bg-gradient-to-br from-blue-500 to-sky-900 rounded-xl flex items-center justify-center shadow-lg shadow-sky-800/50 float-animation">
+                            <div class="w-12 h-6 bg-gradient-to-br from-blue-500 to-blue-950 rounded-xl flex items-center justify-center shadow-lg shadow-sky-800/50 float-animation">
                                 <span class="text-base">✨</span>
                             </div>
-                            <h2 class="text-base font-bold bg-gradient-to-r from-blue-600 to-sky-900 bg-clip-text text-transparent">
+                            <h2 class="text-base font-bold bg-gradient-to-r from-blue-600 to-blue-950 bg-clip-text text-transparent">
                                 Frase de la semana
                             </h2>
                         </div>
@@ -54,7 +54,7 @@
                             </p>
 
                             <!-- Autor -->
-                            <p class="text-base md:text-lg text-sky-800 font-semibold text-right italic relative z-10">
+                            <p class="text-base md:text-lg text-blue-950 font-semibold text-right italic relative z-10">
                                 - Martha Gellhorn
                             </p>
 
@@ -64,7 +64,7 @@
 
                         <!-- Línea decorativa -->
                         <div class="flex justify-center mt-8">
-                            <div class="w-16 h-1 bg-gradient-to-r from-blue-500 via-sky-500 to-sky-900 rounded-full gradient-animation"></div>
+                            <div class="w-16 h-1 bg-gradient-to-r from-blue-500 via-blue-500 to-blue-950 rounded-full gradient-animation"></div>
                         </div>
                     </div>
                 @endforeach
