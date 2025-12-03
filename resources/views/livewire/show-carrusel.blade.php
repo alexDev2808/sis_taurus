@@ -20,7 +20,7 @@
         }
 </style>
 
-<div class="w-full h-screen bg-blue-950">
+<div class="w-full h-screen" style="background-color: #{{ $color_fondo }};">
     <div class="w-full h-full flex text-white text-3xl font-bold">
         <div class="w-1/3 h-screen flex flex-col">
 

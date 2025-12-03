@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('slider_settings', function (Blueprint $table) {
             $table->id();
+            $table->integer('tiempo_transicion')->default(60); // Tiempo en segundos
+            $table->string('color_fondo', 6)->default('002455');
             $table->timestamps();
         });
     }

@@ -5,6 +5,7 @@ namespace App\Livewire;
 use App\Models\Carrusel;
 use App\Models\Upload;
 use Livewire\Component;
+use App\Models\SliderSetting;
 
 class ShowCarrusel extends Component
 {
@@ -12,6 +13,7 @@ class ShowCarrusel extends Component
 
     public function render()
     {
+        $color_fondo = SliderSetting::getConfig()->color_fondo;
         $comunicados = [
             [
                 'titulo' => 'Frase de la semana',
@@ -19,6 +21,6 @@ class ShowCarrusel extends Component
             ]
         ];
         $uploads = Upload::all();
-        return view('livewire.show-carrusel', compact('uploads', 'comunicados'));
+        return view('livewire.show-carrusel', compact('uploads', 'comunicados', 'color_fondo'));
     }
 }

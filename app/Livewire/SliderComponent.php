@@ -2,12 +2,19 @@
 
 namespace App\Livewire;
 
+use App\Models\SliderSetting;
 use App\Models\Upload;
 use Livewire\Component;
 
 class SliderComponent extends Component
 {
-    public $delay = 60000; // 60 segundos por defecto
+    public $delay;
+
+    public function mount()
+    {
+        $config = SliderSetting::getConfig();
+        $this->delay = $config->delay; // Convierte segundos a milisegundos automáticamente
+    }
 
     public function render()
     {
