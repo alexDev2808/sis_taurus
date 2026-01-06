@@ -13,7 +13,12 @@
 
                     <div class="flex flex-col items-center gap-2">
                         <div class="py-5">
-                            <img class="object-contain w-48" src="{{ asset('images/QR.png') }}" />
+                            <img class="object-contain w-10 place-self-center" src="{{ asset('images/Info.png') }}"/>
+                            <div class="leading-none mt-2 mb-4 relative h-12">
+                                <p class="font-normal text-[34px] tracking-[-0.06em]">Información</p>
+                                <p class="tracking-wider text-[40px] font-extrabold absolute top-5">general</p>
+                            </div>
+                            <img class="object-contain w-38" src="{{ asset('images/QR.png') }}" />
                         </div>
 
                         <div>
