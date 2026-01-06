@@ -9,6 +9,9 @@ class CarruselEnsamble extends Component
 {
     public $isPaused = false;
     public $delay = 90000;
+    public $color_fondo = '002455';
+
+    #Tamaño de pantalla
 
     protected $listeners = [];
 

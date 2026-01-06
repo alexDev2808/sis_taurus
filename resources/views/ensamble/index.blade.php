@@ -12,9 +12,9 @@
                     <a href="{{ route('ensamble.show') }}" class="p-3 bg-indigo-500 text-white text-sm font-bold">
                         {{ __('Ver carrusel') }}
                     </a>
-                    <a href="{{ route('ensamble.create') }}" class="p-3 bg-slate-900 text-white text-sm font-bold">
+                    {{-- <a href="{{ route('ensamble.create') }}" class="p-3 bg-slate-900 text-white text-sm font-bold">
                         {{ __('Agregar elemento') }}
-                    </a>
+                    </a> --}}
                 </div>
         </div>
     </x-slot>

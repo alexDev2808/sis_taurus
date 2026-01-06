@@ -1,67 +1,42 @@
 
-<div>
-
-    <div class="w-14 h-8 absolute top-0 left-0 z-40 flex justify-center items-center">
-        <a href="{{ route('ensamble.index') }}">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
-            </svg> 
-        </a>   
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15.91 11.672a.375.375 0 0 1 0 .656l-5.603 3.113a.375.375 0 0 1-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112Z" />
-        </svg> 
+<div class="w-full min-h-screen" style="background-color: #{{ $color_fondo }};">
+    <div class="w-full h-full flex text-white text-3xl font-bold">
         
-    </div>
+            <div class="w-full h-screen flex px-5 pe-0">
 
-    <div class="swiper mySwiper w-full h-screen">
-        <div class="swiper-wrapper">
-            @foreach ($items as $item)
-                <div class="swiper-slide">
-                    <iframe 
-                        class="w-full h-full" 
-                        src="{{ $item->url }}" 
+                <div class="w-1/4 h-screen flex flex-col justify-between">
+
+                    <div class="flex justify-between items-center h-14 pt-2 ps-2">
+                        <img class="object-contain w-32" src="{{ asset('images/Taurus_slogan.png') }}"/>
+                        <h4 class="font-bold text-xl">Ensamble</h4>
+                    </div>
+
+                    <div class="flex flex-col items-center gap-2">
+                        <div class="py-5">
+                            <img class="object-contain w-48" src="{{ asset('images/QR.png') }}" />
+                        </div>
+
+                        <div>
+                            @livewire('reloj-component')
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="w-3/4 h-screen flex justify-end overflow-hidden">
+                    <iframe
+                        width="900" 
+                        height="650" 
+                        src="https://lookerstudio.google.com/embed/reporting/e687bb67-03ce-4d1b-b100-585d7d7e8c7e/page/yM8RE" 
                         frameborder="0" 
                         style="border:0" 
                         allowfullscreen 
                         sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox">
                     </iframe>
                 </div>
-            @endforeach
-        </div>
-        <div class="swiper-button-next text-zinc-100"></div>
-        <div class="swiper-button-prev text-zinc-100"></div>
-        <div class="swiper-pagination"></div>
-    </div>
+
+            
+            </div>
+            
+
 </div>
-
-@push('scripts')
-
-<script>
-    document.addEventListener('livewire:initialized', () => {
-        const paused = "yes";
-        const swiper = new Swiper(".mySwiper", {
-            grabCursor: true,
-            effect: 'fade',
-            keyboard: {
-                enabled: true
-            },
-            autoplay: {
-                delay: {{ $delay }},
-                disableOnInteraction: false,
-                pauseOnMouseEnter: true
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                type: "progressbar",
-                clickable: true
-            },
-        });
-    });
-</script>
-
-@endpush
