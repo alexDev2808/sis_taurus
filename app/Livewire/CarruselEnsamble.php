@@ -12,8 +12,16 @@ class CarruselEnsamble extends Component
     public $color_fondo = '002455';
 
     #Tamaño de pantalla
+    public $screenWidth = 0;
+    public $screenHeight = 0;
 
     protected $listeners = [];
+
+    public function updateScreenSize($width, $height)
+    {
+        $this->screenWidth = $width;
+        $this->screenHeight = $height;
+    }
 
     public function toogleBtn() {
         $this->isPaused = !$this->isPaused;

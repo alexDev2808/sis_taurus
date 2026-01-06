@@ -28,20 +28,51 @@
 
                 </div>
 
-                <div class="w-3/4 h-screen flex justify-end overflow-hidden">
+
+                <div class="w-3/4 h-screen flex justify-end overflow-hidden" id="iframe-container">
                     <iframe
-                        width="900" 
-                        height="650" 
-                        src="https://lookerstudio.google.com/embed/reporting/e687bb67-03ce-4d1b-b100-585d7d7e8c7e/page/yM8RE" 
-                        frameborder="0" 
-                        style="border:0" 
-                        allowfullscreen 
+                        id="dashboard-iframe"
+                        src="https://lookerstudio.google.com/embed/reporting/e687bb67-03ce-4d1b-b100-585d7d7e8c7e/page/yM8RE"
+                        frameborder="0"
+                        style="border:0"
+                        allowfullscreen
                         sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox">
                     </iframe>
                 </div>
 
             
             </div>
-            
+
 
 </div>
+
+<script>
+    (function() {
+        function updateIframeSize() {
+            const iframe = document.getElementById('dashboard-iframe');
+            if (iframe) {
+                const width = window.innerWidth * 0.75;
+                const height = window.innerHeight;
+
+                iframe.width = width;
+                iframe.height = height;
+
+                // También actualizar Livewire
+                if (window.Livewire) {
+                    Livewire.find('{{ $_instance->getId() }}').set('screenWidth', window.innerWidth);
+                    Livewire.find('{{ $_instance->getId() }}').set('screenHeight', window.innerHeight);
+                }
+            }
+        }
+
+        // Ejecutar cuando cargue
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', updateIframeSize);
+        } else {
+            updateIframeSize();
+        }
+
+        // Ejecutar cuando redimensione
+        window.addEventListener('resize', updateIframeSize);
+    })();
+</script>
