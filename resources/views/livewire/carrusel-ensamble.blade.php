@@ -6,14 +6,14 @@
 
                 <div class="w-1/4 h-screen flex flex-col justify-between">
 
-                    <div class="flex justify-between items-center h-14 pt-2 ps-2">
+                    <div class="flex justify-between items-center h-14 pt-2 pe-2">
                         <img class="object-contain w-32" src="{{ asset('images/Taurus_slogan.png') }}"/>
                         <h4 class="font-bold text-xl">Ensamble</h4>
                     </div>
 
                     <div class="flex flex-col items-center gap-2">
                         <div class="py-5">
-                            <img class="object-contain w-10 place-self-center" src="{{ asset('images/Info.png') }}"/>
+                            <img class="object-contain w-10 m-auto" src="{{ asset('images/Info.png') }}"/>
                             <div class="leading-none mt-2 mb-4 relative h-12">
                                 <p class="font-normal text-[34px] tracking-[-0.06em]">Información</p>
                                 <p class="tracking-wider text-[40px] font-extrabold absolute top-5">general</p>
