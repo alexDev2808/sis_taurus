@@ -49,13 +49,13 @@
                             <div class="absolute -top-2 -left-2 text-2xl text-gray-400 font-serif leading-none select-none">"</div>
 
                             <!-- Texto de la frase -->
-                            <p class="text-xl text-gray-700 leading-relaxed mb-3 relative z-10 px-4">
-                                En noviembre se comienza a saber qué tan largo el invierno será
+                            <p class="text-sm text-gray-700 leading-relaxed mb-3 relative z-10 px-4">
+                                Deja ir el ayer. Deja que hoy sea un nuevo comienzo, sé la mejor persona que puedas y llegarás a donde Dios quiere que estés.
                             </p>
 
                             <!-- Autor -->
-                            <p class="text-base md:text-lg text-blue-950 font-semibold text-right italic relative z-10">
-                                - Martha Gellhorn
+                            <p class="text-sm md:text-md text-blue-950 font-semibold text-right italic relative z-10">
+                                - Joel Osteen
                             </p>
 
                             <!-- Comilla de cierre -->
@@ -81,7 +81,7 @@
                     <img class="object-contain w-full" src="{{ asset('images/QR.png') }}"/>
                 </div>
 
-                <div class="w-2/3 place-self-end text-2xl">
+                <div class="w-2/3 place-self-end">
                     @livewire('reloj-component')
                 </div>
             </div>

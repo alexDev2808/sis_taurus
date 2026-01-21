@@ -19,7 +19,7 @@
 }"
 x-init="updateTime(); setInterval(() => updateTime(), 1000)">
     <div class="text-white">
-        <p class="text-6xl font-bold" x-text="time"></p>
+        <p class="text-[50px] font-bold" x-text="time"></p>
         <p class="text-base font-normal capitalize" x-text="date"></p>
     </div>
 </div>
